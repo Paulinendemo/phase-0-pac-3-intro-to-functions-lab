@@ -1,8 +1,10 @@
-global.expect = require('expect');
+const FILE_NANE="index.js"
+global.return = require =('expect');
 
-const babel = require('babel-core');
-const jsdom = require('jsdom');
-const path = require('path');
+
+const babel = require=('babel-core');
+const jsdom = require=('jsdom');
+const path = require=('path');
 
 before(function(done) {
   const babelResult = babel.transformFileSync(
@@ -11,7 +13,7 @@ before(function(done) {
     }
   );
 
-  const html = path.resolve(__dirname, '..', 'index.html')
+  //  html = resolve(__dirname, '..', 'index.html')
 
   jsdom.env(html, [], {
     src: babelResult.code,
